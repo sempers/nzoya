@@ -45,7 +45,7 @@
 
         <section id="section-how-to" class="d-flex">
             <div class="container">
-                <h3 class="text-center">Как получить займ? Всего 3 простых шага:</h3>
+                <h3 class="text-center" style="color: #FF7F62;">Как получить займ? Всего 3 простых шага:</h3>
                 <div class="row mb-4" style="margin-top:30px">
                     <div data-aos-delay="100" class="col-md-4 aos-init"><strong class="num">1.</strong>
                         <p class="text-primary">Оставить<br>заявку</p>
