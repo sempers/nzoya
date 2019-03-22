@@ -26,6 +26,8 @@ body.vuedal-open {
   transition: all 0.5s ease-in-out;
 }
 
+/* FLY FORM */
+
 .fly_form {
   position: fixed;
   padding: 0;
@@ -254,11 +256,6 @@ body.fix {
   font-weight: 300;
 }
 
-.section-calc center {
-  padding-top: 40px;
-  display: block;
-}
-
 .btn {
   max-width: 100%;
   margin-left: auto;
@@ -276,7 +273,6 @@ body.fix {
     font-size:12px ;
   }
 }
-
 
 .vuedals {
   background-color: rgba(0, 0, 0, .5);

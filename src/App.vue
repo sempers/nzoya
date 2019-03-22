@@ -2,17 +2,22 @@
   <div id="app">
     <zoya-nav></zoya-nav>
     <zoya-article></zoya-article>
-	<br><br>
     <zoya-footer></zoya-footer>
-    <br>
-    <div tabindex="0" class="vuedals" style="display: none;"></div>
-	<zoya-flyform></zoya-flyform>
+	<!--<zoya-flyform></zoya-flyform>-->
   </div>
 </template>
 
 <script>
+import ZoyaNav from './components/ZoyaNav.vue';
+import ZoyaArticle from './components/ZoyaArticle.vue';
+import ZoyaFooter from './components/ZoyaFooter.vue';
+import ZoyaFlyform from './components/ZoyaFlyform.vue';
+
 export default {
   name: 'app',
+    components: {
+      ZoyaNav, ZoyaArticle, ZoyaFooter, ZoyaFlyform
+    },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -23,15 +28,10 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
 }
 
-h1, h2 {
+/*h1, h2 {
   font-weight: normal;
 }
 
@@ -47,5 +47,5 @@ li {
 
 a {
   color: #42b983;
-}
+}*/
 </style>

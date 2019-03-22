@@ -1,0 +1,74 @@
+section {
+    min-height:320px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+#section-promo {
+    background-color:#f0f0f0;
+    /*background: #f5d1e2 url(images/top_bg.png) no-repeat center center fixed;
+    background-size: cover;*/
+}
+
+#section-who {
+    background: #FF7F62;
+    color: #FFF;
+    padding:0;
+}
+
+#section-how-to {
+
+}
+
+#section-who .right-col {
+    background: url(images/cafe.png) no-repeat top right;
+    background-size: cover;
+    margin-right: -25px;
+}
+
+#section-calc {
+    padding-top:0;
+    background: #F9F9F9;
+}
+
+#section-request {
+    min-height: 80vh;
+}
+
+.text-primary {
+    color: #8650C4 !important;
+}
+.text-center {
+    text-align: center !important;
+}
+
+.navbar {
+   background-color:white;
+}
+
+.btn.btn-zoya-size {
+    padding-left: 67px;
+    padding-right: 67px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #8650C4;
+    border-color: #8650C4;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #733cb2;
+    border-color: #6d39a8;
+}
+
+strong.num {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
