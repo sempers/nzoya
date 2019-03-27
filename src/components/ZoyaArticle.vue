@@ -7,7 +7,9 @@
                     <div class="col col-lg-8">
                         <h1 class="mt-4 aos-init aos-animate text-center mb-4">Привет, я ZOYA Finance!</h1>
                         <p data-aos-delay="100" class="lead aos-init aos-animate">Я – скорая финансовая помощь для вашего бизнеса - получите займ до 3&nbsp;000&nbsp;000 рублей без очередей, залогов и справок. Никакой бюрократической возни!</p>
-                        <div class="text-center"><button data-aos-delay="400" class="btn btn-primary btn-zoya-size aos-init aos-animate go_my_form" onclick="yaCounter49730020.reachGoal(&#39;main_btn&#39;); return true;">Получить займ</button></div>
+                        <div class="text-center">
+                            <button data-aos-delay="400" class="btn btn-primary btn-zoya-size aos-init aos-animate go_my_form">Получить займ</button>
+                        </div>
                     </div>
                     <div class="col-lg-2"></div>
                 </div>
@@ -78,7 +80,17 @@
                                     <div class="col-6">
                                         <p class="sub">Эквайринговый оборот,<br>&#8381; в месяц</p>
                                     </div>
-                                    <div class="col-6 text-right">
+                                    <div class="col-6">
+                                        <div class="q_val qw1_val">{{request.eq}} &#8381;</div>
+                                    </div>
+                                    <div class="row">
+                                        <vue-slider
+                                                ref="slider-qw1"
+                                                v-model="request.eq"
+                                                v-bind="sliderOptions.options1"
+                                        ></vue-slider>
+                                    </div>
+                                    <!--<div class="col-6 text-right">
                                         <div class="counter">
                                             <div class="q_val qw1_val">100000 &#8381;</div>
                                             <div class="c_inp">
@@ -86,10 +98,15 @@
                                                 <div class="cheker qw1_cheker">ok</div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                 </div>
-                                <input type="text" id="qw1" class="qw1" name="qw1" value="100000" style="display: none;"><span class="range-bar"><span class="range-handle" style="left: 10.1864px;"></span><span class="range-min">50000</span><span class="range-max">3000000</span>
-                                <span class="range-quantity" style="width: 10px;"></span></span>
+                                <!--<input type="text" id="qw1" class="qw1" name="qw1" value="100000">-->
+                                <!--<span class="range-bar">
+                                    <span class="range-handle" style="left: 10.1864px;"></span>
+                                    <span class="range-min">50000</span>
+                                    <span class="range-max">3000000</span>
+                                    <span class="range-quantity" style="width: 10px;"></span>
+                                </span>-->
                             </div>
                         </div>
                         <div class="calc_row">
@@ -100,16 +117,23 @@
                                     </div>
                                     <div class="col-6 text-right">
                                         <div class="counter">
-                                            <div class="q_val qw2_val">6 мес.</div>
-                                            <div class="c_inp">
+                                            <div class="q_val qw2_val">{{request.months}} мес.</div>
+                                            <!--<div class="c_inp">
                                                 <input type="text" value="4" class="qw2_val_inp form-control">
                                                 <div class="cheker qw2_cheker">ok</div>
-                                            </div>
+                                            </div>-->
                                         </div>
                                     </div>
                                 </div>
-                                <input type="text" id="qw2" class="qw2" name="qw2" value="6" style="display: none;"><span class="range-bar"><span class="range-handle" style="left: 150.25px;"></span><span class="range-min">4</span><span class="range-max">12</span>
-                                <span class="range-quantity" style="width: 150.25px;"></span></span>
+                                <!--<input type="text" id="qw2" class="qw2" name="qw2" value="6" style="display: none;"><span class="range-bar"><span class="range-handle" style="left: 150.25px;"></span><span class="range-min">4</span><span class="range-max">12</span>
+                                <span class="range-quantity" style="width: 150.25px;"></span></span>-->
+                                <div class="row">
+                                    <vue-slider
+                                            ref="slider-qw2"
+                                            v-model="request.months"
+                                            v-bind="sliderOptions.options2"
+                                    ></vue-slider>
+                                </div>
                             </div>
                         </div>
                         <div class="row mt-4">
@@ -117,15 +141,15 @@
                                 <p class="sub">Вы можете получить <br>аванс в размере</p>
                             </div>
                             <div class="col-6 text-right">
-                                <span class="value"><span id="calc_total">134000</span> &#8381;</span>
+                                <span id="calc_total" class="q_val">134000 &#8381;</span>
                             </div>
                         </div>
-                        <div class="text-center"><button class="btn btn-primary btn-zoya-size go_my_form" onclick="yaCounter49730020.reachGoal(&#39;calc_btn&#39;); return true;">Получить займ</button></div>
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-zoya-size go_my_form">Получить займ</button>
+                        </div>
                     </div>
                 </div>
-                <div class="ml-auto mr-auto">
-
-                </div>
+                <div class="ml-auto mr-auto"></div>
                 <p class="text-center mt-4 mb-2" style="font-size: 12px; color: rgb(97, 97, 97);">Пример расчета носит исключительно информационный характер и не является публичной офертой.</p>
             </div>
         </section>
@@ -145,26 +169,26 @@
                                     <div class=" ml-auto mr-auto">
                                         <!--- | form | --->
                                         <form id="footer_form">
-                                            <input type="hidden" name="form" value="footer_form">
+                                            <!--<input type="hidden" name="form" value="footer_form">
                                             <input type="hidden" name="money" value="100000" class="form_money">
                                             <input type="hidden" name="months" value="6" class="form_months">
                                             <input type="hidden" name="total" value="134000" class="form_total">
                                             <input type="hidden" name="form_name" value="Заявка на финансирование">
                                             <input type="hidden" name="gorod" value="" class="gorod">
                                             <input type="hidden" name="page_name" value="Главная">
-                                            <input type="hidden" name="site_link" value="http://zoyafinance.ru/">
+                                            <input type="hidden" name="site_link" value="http://zoyafinance.ru/">-->
 
                                             <div class="form_box">
-                                                <input type="phone" name="phone" placeholder="8 (" class="form-control form-control-lg ml-auto mr-auto" onclick="yaCounter49730020.reachGoal(&#39;form_phone&#39;); return true;">
+                                                <input type="phone" name="phone" v-model="request.phone" placeholder="" class="form-control form-control-lg ml-auto mr-auto">
                                                 <br>
                                                 <div class="form-check ml-auto mr-auto">
-                                                    <input type="checkbox" value="1" name="rules" id="defaultCheck1" class="form-check-input">
+                                                    <input type="checkbox" v-model="request.agreeToProcess" value="1" name="rules" id="defaultCheck1" class="form-check-input">
                                                     <label for="defaultCheck1" class="form-check-label">Указывая свои
                                                         персональные данные в полях заявки, вы соглашаетесь на их <a href="http://zoyafinance.ru/#" class="load" data-page="rules">обработку</a>.
                                                     </label>
                                                 </div>
                                                 <div class="form_btn">
-                                                    <button class="send_button btn btn-primary btn-zoya-size" onclick="yaCounter49730020.reachGoal(&#39;form_btn&#39;); return true;" disabled="disabled">Получить займ</button>
+                                                    <button class="send_button btn btn-primary btn-zoya-size" :disabled="disableSubmit">Получить займ</button>
                                                 </div>
                                             </div>
                                             <div class="message"></div>
@@ -182,3 +206,105 @@
         </section>
     </article>
 </template>
+<script>
+    export default {
+        components: {
+            'vueSlider': window['vue-slider-component'],
+        },
+        data() {
+            return {
+                request: {
+                    eq: 1000000,
+                    months: 6,
+                    total: 134000,
+                    agreeToProcess: false,
+                    phone: '8(495)555-55-55'
+                },
+                sliderOptions: {
+                    options1: {
+                        dotSize: 14,
+                        width: 'auto',
+                        height: 4,
+                        direction: 'ltr',
+                        data: null,
+                        min: 50000,
+                        max: 3000000,
+                        interval: 1,
+                        disabled: false,
+                        clickable: true,
+                        duration: 0.5,
+                        lazy: false,
+                        tooltip: 'focus',
+                        tooltipPlacement: 'top',
+                        tooltipFormatter: void 0,
+                        useKeyboard: false,
+                        enableCross: true,
+                        fixed: false,
+                        minRange: void 0,
+                        maxRange: void 0,
+                        order: true,
+                        marks: false,
+                        dotOptions: void 0,
+                        process: true,
+                        dotStyle: void 0,
+                        railStyle: void 0,
+                        processStyle: void 0,
+                        tooltipStyle: void 0,
+                        stepStyle: void 0,
+                        stepActiveStyle: void 0,
+                        labelStyle: void 0,
+                        labelActiveStyle: void 0
+                    },
+                    options2: {
+                        dotSize: 14,
+                        width: 'auto',
+                        height: 4,
+                        direction: 'ltr',
+                        data: null,
+                        min: 4,
+                        max: 12,
+                        interval: 1,
+                        disabled: false,
+                        clickable: true,
+                        duration: 0.5,
+                        lazy: false,
+                        tooltip: 'focus',
+                        tooltipPlacement: 'top',
+                        tooltipFormatter: void 0,
+                        useKeyboard: false,
+                        enableCross: true,
+                        fixed: false,
+                        minRange: void 0,
+                        maxRange: void 0,
+                        order: true,
+                        marks: false,
+                        dotOptions: void 0,
+                        process: true,
+                        dotStyle: void 0,
+                        railStyle: void 0,
+                        processStyle: void 0,
+                        tooltipStyle: void 0,
+                        stepStyle: void 0,
+                        stepActiveStyle: void 0,
+                        labelStyle: void 0,
+                        labelActiveStyle: void 0,
+                    }
+                }
+
+            };
+        },
+
+        computed: {
+            disableSubmit() {
+                return !(this.phoneValid() && this.request.agreeToProcess);
+            }
+        },
+
+        methods: {
+            phoneValid() {
+                return true;
+            }
+        }
+    }
+
+</script>
