@@ -77,56 +77,32 @@
                         <div class="calc_row">
                             <div class="slider-wrapper">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-6" style="padding-left:0">
                                         <p class="sub">Эквайринговый оборот,<br>&#8381; в месяц</p>
                                     </div>
-                                    <div class="col-6">
-                                        <div class="q_val qw1_val">{{request.eq}} &#8381;</div>
+                                    <div class="col-6 text-right">
+                                        <div class="q_val">{{request.eq}} &#8381;</div>
                                     </div>
-                                    <div class="row">
+                                    </div>
+                                 <div class="row">
                                         <vue-slider
                                                 ref="slider-qw1"
                                                 v-model="request.eq"
                                                 v-bind="sliderOptions.options1"
                                         ></vue-slider>
-                                    </div>
-                                    <!--<div class="col-6 text-right">
-                                        <div class="counter">
-                                            <div class="q_val qw1_val">100000 &#8381;</div>
-                                            <div class="c_inp">
-                                                <input type="text" value="100000" class="qw1_val_inp form-control">
-                                                <div class="cheker qw1_cheker">ok</div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                </div>
-                                <!--<input type="text" id="qw1" class="qw1" name="qw1" value="100000">-->
-                                <!--<span class="range-bar">
-                                    <span class="range-handle" style="left: 10.1864px;"></span>
-                                    <span class="range-min">50000</span>
-                                    <span class="range-max">3000000</span>
-                                    <span class="range-quantity" style="width: 10px;"></span>
-                                </span>-->
+                               </div>
                             </div>
                         </div>
                         <div class="calc_row">
                             <div class="slider-wrapper">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-6" style="padding-left:0">
                                         <p class="sub">Срок выплаты аванса, месяцев</p>
                                     </div>
                                     <div class="col-6 text-right">
-                                        <div class="counter">
-                                            <div class="q_val qw2_val">{{request.months}} мес.</div>
-                                            <!--<div class="c_inp">
-                                                <input type="text" value="4" class="qw2_val_inp form-control">
-                                                <div class="cheker qw2_cheker">ok</div>
-                                            </div>-->
-                                        </div>
+                                            <div class="q_val">{{request.months}} мес.</div>
                                     </div>
                                 </div>
-                                <!--<input type="text" id="qw2" class="qw2" name="qw2" value="6" style="display: none;"><span class="range-bar"><span class="range-handle" style="left: 150.25px;"></span><span class="range-min">4</span><span class="range-max">12</span>
-                                <span class="range-quantity" style="width: 150.25px;"></span></span>-->
                                 <div class="row">
                                     <vue-slider
                                             ref="slider-qw2"
@@ -137,14 +113,14 @@
                             </div>
                         </div>
                         <div class="row mt-4">
-                            <div class="col-6">
+                            <div class="col-6" style="padding-left:0">
                                 <p class="sub">Вы можете получить <br>аванс в размере</p>
                             </div>
                             <div class="col-6 text-right">
                                 <span id="calc_total" class="q_val">134000 &#8381;</span>
                             </div>
                         </div>
-                        <div class="text-center">
+                        <div class="row mt-4 text-center">
                             <button class="btn btn-primary btn-zoya-size go_my_form">Получить займ</button>
                         </div>
                     </div>
@@ -207,10 +183,22 @@
     </article>
 </template>
 <script>
+    import VueSlider from 'vue-slider-component'
+    //import 'vue-slider-component/dist-css/vue-slider-component.css'
+    // import theme
+    import 'vue-slider-component/theme/default.css'
+
+
     export default {
         components: {
-            'vueSlider': window['vue-slider-component'],
+            VueSlider
         },
+
+        updated() {
+            console.log("AOS init()")
+            AOS.init();
+        },
+
         data() {
             return {
                 request: {
@@ -220,44 +208,45 @@
                     agreeToProcess: false,
                     phone: '8(495)555-55-55'
                 },
+
                 sliderOptions: {
                     options1: {
                         dotSize: 14,
-                        width: 'auto',
+                        width: '100%',
                         height: 4,
                         direction: 'ltr',
                         data: null,
                         min: 50000,
                         max: 3000000,
-                        interval: 1,
+                        interval: 1000,
                         disabled: false,
                         clickable: true,
                         duration: 0.5,
                         lazy: false,
                         tooltip: 'focus',
                         tooltipPlacement: 'top',
-                        tooltipFormatter: void 0,
+                        tooltipFormatter: undefined,
                         useKeyboard: false,
                         enableCross: true,
                         fixed: false,
-                        minRange: void 0,
-                        maxRange: void 0,
+                        minRange: undefined,
+                        maxRange: undefined,
                         order: true,
                         marks: false,
-                        dotOptions: void 0,
+                        dotOptions: undefined,
                         process: true,
-                        dotStyle: void 0,
-                        railStyle: void 0,
-                        processStyle: void 0,
-                        tooltipStyle: void 0,
-                        stepStyle: void 0,
-                        stepActiveStyle: void 0,
-                        labelStyle: void 0,
-                        labelActiveStyle: void 0
+                        dotStyle: undefined,
+                        railStyle: undefined,
+                        processStyle: undefined,
+                        tooltipStyle: undefined,
+                        stepStyle: undefined,
+                        stepActiveStyle: undefined,
+                        labelStyle: undefined,
+                        labelActiveStyle: undefined
                     },
                     options2: {
                         dotSize: 14,
-                        width: 'auto',
+                        width: '100%',
                         height: 4,
                         direction: 'ltr',
                         data: null,
@@ -270,27 +259,26 @@
                         lazy: false,
                         tooltip: 'focus',
                         tooltipPlacement: 'top',
-                        tooltipFormatter: void 0,
+                        tooltipFormatter: undefined,
                         useKeyboard: false,
                         enableCross: true,
                         fixed: false,
-                        minRange: void 0,
-                        maxRange: void 0,
+                        minRange: undefined,
+                        maxRange: undefined,
                         order: true,
                         marks: false,
-                        dotOptions: void 0,
+                        dotOptions: undefined,
                         process: true,
-                        dotStyle: void 0,
-                        railStyle: void 0,
-                        processStyle: void 0,
-                        tooltipStyle: void 0,
-                        stepStyle: void 0,
-                        stepActiveStyle: void 0,
-                        labelStyle: void 0,
-                        labelActiveStyle: void 0,
+                        dotStyle: undefined,
+                        railStyle: undefined,
+                        processStyle: undefined,
+                        tooltipStyle: undefined,
+                        stepStyle: undefined,
+                        stepActiveStyle: undefined,
+                        labelStyle: undefined,
+                        labelActiveStyle: undefined
                     }
                 }
-
             };
         },
 
@@ -302,7 +290,8 @@
 
         methods: {
             phoneValid() {
-                return true;
+                let re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+                return re.test(this.request.phone);
             }
         }
     }

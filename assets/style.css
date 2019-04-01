@@ -108,6 +108,7 @@ form .message span.red {
   display: none;
 }
 
+
 .slider-wrapper {
   margin: 30px 0 50px;
 }
@@ -153,6 +154,8 @@ form .message span.red {
 .slider-wrapper .range-min, .slider-wrapper .range-max {
   display: none;
 }
+
+
 
 .c_inp {
   width: 200px;
