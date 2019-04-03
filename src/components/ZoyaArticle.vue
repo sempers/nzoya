@@ -81,7 +81,11 @@
                                         <p class="sub">Эквайринговый оборот,<br>&#8381; в месяц</p>
                                     </div>
                                     <div class="col-6 text-right">
-                                        <div class="q_val">{{request.eq}} &#8381;</div>
+                                        <div class="q_val" @click="shownEdit.eq = true" v-show="!shownEdit.eq">{{request.eq}} &#8381;</div>
+                                        <div class="c_inp" v-show="shownEdit.eq">
+                                            <input type="text" class="qw1_val_inp form-control" v-model="request.eq" >
+                                            <div class="cheker qw1_cheker" @click="shownEdit.eq = false">ОК</div>
+                                        </div>
                                     </div>
                                     </div>
                                  <div class="row">
@@ -100,7 +104,11 @@
                                         <p class="sub">Срок выплаты аванса, месяцев</p>
                                     </div>
                                     <div class="col-6 text-right">
-                                            <div class="q_val">{{request.months}} мес.</div>
+                                        <div class="q_val" @click="shownEdit.months = true" v-show="!shownEdit.months">{{request.months}} мес.</div>
+                                        <div class="c_inp" v-show="shownEdit.months">
+                                            <input type="text" v-model="request.months" class="qw2_val_inp form-control">
+                                            <div class="cheker qw2_cheker" @click="shownEdit.months = false">ОК</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -201,6 +209,11 @@
 
         data() {
             return {
+                shownEdit: {
+                    months: false,
+                    eq: false
+                },
+
                 request: {
                     eq: 1000000,
                     months: 6,

@@ -1,11 +1,403 @@
 :root {
-    --primary: #8650C4;
+    --primary:#8650C4;
     --main-color: #8650C4;
+    --primary-half: rgba(134, 80, 196, 0.5);
+    --primary-quarter: rgba(134, 80, 196, 0.25);
 }
 
 a, a:hover, a:visited, a:active {
     color: var(--primary);
 }
+
+/*.form-control:focus {
+    border-color:var(--primary);
+}*/
+
+.btn:focus, .btn.focus {
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(134, 80, 196, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(134, 80, 196, 0.25);
+}
+
+.btn-primary:focus, .btn-primary.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(134, 80, 196, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(134, 80, 196, 0.5);
+}
+
+/* /////////////////////////////////////
+
+style.css
+
+////////////////////////////////////// */
+
+body, html {
+  overflow-x: hidden;
+    font-family: 'PT Sans', sans-serif;
+}
+
+html body.vuedal-open {
+  overflow-y: hidden !important;
+}
+
+body.vuedal-open {
+  overflow: hidden
+}
+
+#app {
+  position: relative;
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
+
+.animation {
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/* FLY FORM */
+
+.fly_form {
+    position: fixed;
+    padding: 0;
+    z-index: 0;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fly_form.active {
+    z-index: 5000;
+    opacity: 1;
+}
+
+.fly_form .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(255,255,255,0.8);
+    cursor: pointer;
+}
+
+form .message {
+    text-align: center;
+    font-size: 14px;
+}
+
+form .message span {
+    display: block;
+    padding-top: 30px;
+}
+
+form .message span.red {
+    color: red;
+}
+
+.fly_form .inner {
+    background: #fff;
+    transition: all .6s ease;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    will-change: transform;
+    width: 650px;
+    max-width: 90%;
+    border-radius: 24px;
+    -webkit-box-shadow: 0px 12px 24px rgba(44, 54, 67, 0.15);
+    box-shadow: 0px 12px 24px rgba(44, 54, 67, 0.15);
+    padding: 50px 90px;
+    z-index: 5;
+}
+
+.form_btn {
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.form_btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: default;
+    display: block;
+}
+
+.form_btn.active:after {
+    display: none;
+}
+
+
+.slider-wrapper {
+    margin: 30px 0 50px;
+}
+.slider-wrapper span {
+    display: block;
+}
+.slider-wrapper .range-bar {
+    background: #ececec;
+    height: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+}
+.range-min, .range-max {
+    display: none;
+}
+
+.slider-wrapper .range-quantity {
+    background: var(--primary);
+    height: 6px;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+.slider-wrapper .range-handle {
+    color: #333;
+    text-align: center;
+    height: 16px;
+    font-size: 10px;
+    position: absolute;
+    top: -5px;
+    width: 16px;
+    background: #FFF;
+    border-radius: 50%;
+    box-shadow: 0.5px 0.5px 2px 1px rgba(0,0,0,.32);
+    transition: all 0s;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.slider-wrapper .range-min, .slider-wrapper .range-max {
+    display: none;
+}
+
+
+
+.c_inp {
+    width: auto;
+    max-width: 200px;
+    position:relative;
+    float:right;
+}
+
+.counter.active .c_inp {
+    display: inline-block;
+}
+
+.c_inp .form-control {
+    height: 48px;
+    width: 100%;
+    font-size: 24px;
+    padding-right: 60px;
+}
+.c_inp .cheker {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 48px;
+    width: 48px;
+    border-left: 1px solid #ced4da;
+    text-align: center;
+    cursor: pointer;
+}
+
+form label {
+    cursor: pointer;
+}
+
+body.fix {
+    overflow: hidden;
+    height: 100%;
+}
+
+.form-control {
+    box-sizing: border-box;
+}
+
+#content_load .c {
+    position: fixed;
+    padding: 70px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-size: 12px;
+    color: #737373;
+    z-index: 5001;
+}
+
+#content_load .c .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form_box {
+    max-width: 420px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#content_load .c .box {
+    position: relative;
+    z-index: 2;
+    padding: 50px;
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+    background: #FFF;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+    -webkit-box-shadow: 0px 12px 24px rgba(44, 54, 67, 0.15);
+    box-shadow: 0px 12px 24px rgba(44, 54, 67, 0.15);
+}
+
+.q_val {
+    text-align: right;
+    height: 48px;
+    font-size: 42px;
+    color: var(--primary);
+    line-height: 48px;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+}
+.counter.active .q_val {
+    display: none;
+}
+
+#my_calc .sub {
+    font-weight: 300;
+}
+
+.btn {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 767px){
+    .q_val {
+        font-size: 25px;
+    }
+    .c_inp .form-control {
+        font-size: 15px;
+    }
+    #my_calc .sub {
+        font-size:12px ;
+    }
+}
+
+.vuedals {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 500px;
+    transition: opacity .4s ease
+}
+
+.vuedal {
+    background: #fff;
+    box-shadow: 3px 5px 20px #333;
+    padding: 20px;
+    margin: 30px 0;
+    transition: all .6s ease;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    will-change: transform;
+    width: 650px
+}
+
+.vuedal.xl {
+    width: 1024px
+}
+
+.vuedal.lg {
+    width: 850px
+}
+
+.vuedal.sm {
+    width: 550px
+}
+
+.vuedal.xs {
+    width: 350px
+}
+
+.vuedal.disabled {
+    opacity: .2
+}
+
+.vuedal.disabled:after {
+    background: transparent;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100
+}
+
+.vuedal header {
+    border-bottom: 1px solid #eee;
+    min-height: 32px;
+    margin-bottom: 20px
+}
+
+.vuedal header .title {
+    font-size: 21px;
+    font-weight: 100
+}
+
+.vuedal header .close {
+    float: right;
+    font-size: 26px;
+    font-weight: 100;
+    line-height: 21px;
+    cursor: pointer
+}
+
+.vuedal-enter, .vuedal-leave-active {
+    opacity: 0
+}
+
+.vuedal-enter .vuedal, .vuedal-leave-active .vuedal {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30px) scale(.95)
+}
+
 
 section {
     min-height:320px;
