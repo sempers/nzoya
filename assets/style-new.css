@@ -141,6 +141,7 @@ form .message span.red {
     display: none;
 }
 
+/*
 
 .slider-wrapper {
     margin: 30px 0 50px;
@@ -186,7 +187,7 @@ form .message span.red {
 
 .slider-wrapper .range-min, .slider-wrapper .range-max {
     display: none;
-}
+}*/
 
 
 
@@ -455,7 +456,7 @@ section {
     font-weight: 200;
 }
 
-.btn-primary {
+.btn-primary, .btn-primary:active {
     color: #fff;
     background-color: var(--main-color);
     border-color: var(--main-color);
@@ -465,6 +466,10 @@ section {
     color: #fff;
     background-color: #733cb2;
     border-color: #6d39a8;
+}
+
+.btn-cnt {
+    margin-top: 24px;
 }
 
 strong.num {
@@ -481,3 +486,4 @@ strong.num {
     border-color: var(--primary) !important;
     background-color: var(--primary) !important;
 }
+
