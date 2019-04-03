@@ -1,7 +1,7 @@
 const cons = require("consolidate");
 const express = require('express');
 const path = require('path');
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.use(express.static(__dirname));
 
 app.engine("html", cons.ejs);
 app.set('view engine', 'html');
-app.set("views", __dirname);
+app.set("views", path.resolve(__dirname));
 
 
 // send the user to index html page inspite of the url
