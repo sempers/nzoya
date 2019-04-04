@@ -309,10 +309,14 @@ section {
 
 #section-how-to { }
 
+#section-who .left-col {
+    background: url(images/top_bg.png) no-repeat top left;
+    color: var(--primary);
+}
+
 #section-who .right-col {
     background: url(images/cafe.png) no-repeat top right;
-    background-size: cover;
-    margin-right: -25px;
+    /*background-size: cover;*/
 }
 
 #section-calc {
