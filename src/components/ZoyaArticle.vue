@@ -43,6 +43,8 @@
                 </div>
             </section>
 
+
+            <!-- HOW TO -->
             <section id="section-how-to" class="d-flex">
                 <div class="container">
                     <h3 class="text-center">Как получить займ? Всего 3 простых шага:</h3>
@@ -67,6 +69,7 @@
                 </div>
             </section>
 
+            <!-- СУММА ФИНАНСИРОВАНИЯ -->
             <section id="section-calc" class="d-flex">
                 <div class="container">
                     <h3 class="text-center">Узнайте сумму финансирования</h3> <br><br>
@@ -133,7 +136,8 @@
                 </div>
             </section>
 
-            <section id="section-request" class="section-full d-flex">
+            <!-- ЗАЯВКА -->
+            <section id="section-request" class="d-flex">
                 <div class="container mb-auto mt-auto">
                     <h3 class="text-center">Заявка на финансирование</h3> <br>
                     <div class="form-f-box">
@@ -144,15 +148,15 @@
                                     телефона, мы вам перезвоним и уточним детали. </p>
                                 <div class="row mt-4">
                                     <div class=" ml-auto mr-auto">
-                                        <!--- | form | --->
-                                        <form id="footer_form">
+                                        <form >
                                             <div class="form-box">
                                                 <!--<input type="phone" name="phone" v-model="request.phone" placeholder="" class="form-control form-control-lg ml-auto mr-auto">-->
                                                 <masked-input mask="\+\7 (111) 111-11-11" v-model="request.phone" class="form-control form-control-lg ml-auto mr-auto" @input="rawVal = arguments[1]"/>
                                                 <div class="form-check ml-auto mr-auto mt-4">
                                                     <input type="checkbox" v-model="request.agreeToProcess" value="1" name="rules" id="agree1" class="form-check-input">
                                                     <label for="agree1" class="form-check-label">Указывая свои
-                                                        персональные данные в полях заявки, вы соглашаетесь на их <a href="http://zoyafinance.ru/#" class="load" data-page="rules">обработку</a>.
+                                                        персональные данные в полях заявки, вы соглашаетесь на их
+                                                        <a href="http://zoyafinance.ru/#" class="load" data-page="rules">обработку</a>.
                                                     </label>
                                                 </div>
                                                 <div class="btn-cnt text-center">
@@ -161,7 +165,6 @@
                                             </div>
                                             <div class="message"></div>
                                         </form>
-                                        <!--- | form | --->
                                     </div>
                                 </div>
                                 <br>
@@ -175,17 +178,18 @@
         </article>
         <!--FLY FORM-->
         <div class="fly-form animation" id="my_form" v-if="shownEdit.flyForm">
-            <div class="overlay"></div>
+            <div class="overlay" @click="shownEdit.flyForm = false"></div>
             <div class="inner">
                 <h3 class="text-center">Заявка на финансирование</h3> <br>
                 <div class="form-f-box">
                     <div class="row mt-4">
-                        <div class=" ml-auto mr-auto"><p style="font-size: 14px;">
+                        <div class=" ml-auto mr-auto"
+                        ><p style="font-size: 14px;">
                             Вам достаточно оставить только свой номер
                             телефона, мы вам перезвоним и уточним детали. </p>
                             <div class="row mt-4">
                                 <div class=" ml-auto mr-auto">
-                                    <form id="footer_form">
+                                    <form>
                                         <!--<input type="hidden" name="form" value="footer_form">
                                         <input type="hidden" name="money" value="100000" class="form_money">
                                         <input type="hidden" name="months" value="6" class="form_months">
