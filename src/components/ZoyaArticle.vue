@@ -18,23 +18,20 @@
             </section>
 
             <section id="section-who" class="d-flex">
-                <div class="row align-self-stretch d-flex mr-auto ml-auto">
-                    <div class="col col-6 left-col align-self-stretch d-flex" style="padding-left:0;padding-right:0;">
-                        <div class="p-4 align-self-stretch d-flex flex-column"><h2 data-aos-delay="0" class="aos-init">Для кого мы сделали этот сервис</h2>
+                <div class="row container mr-auto ml-auto">
+                    <div class="col-6 left-col">
+                        <div class="p-4">
+                            <h2 data-aos-delay="0" class="aos-init">Для кого мы сделали этот сервис</h2>
                             <div data-aos-delay="0" class="mt-auto mb-auto aos-init">
-                                <p>
-                                    Zoya работает с любым розничным бизнесом у которого есть эквайринговый оборот.
-                                </p>
-                                <p>
-                                    В общем, если вы принимаете к оплате карты более 3-х месяцев, оставляйте заявку. Мы обязательно предложим вам вариант финансирования.
-                                </p>
+                                <p>Zoya работает с любым розничным бизнесом у которого есть эквайринговый оборот.</p>
+                                <p>В общем, если вы принимаете к оплате карты более 3-х месяцев, оставляйте заявку. Мы обязательно предложим вам вариант финансирования.</p>
                             </div>
                             <div data-aos-delay="10" class="aos-init btn-cnt">
                                 <button class="btn btn-primary btn-zoya-size go_my_form" @click="showFlyForm()">Оставить заявку</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-6 align-self-stretch d-flex right-col" style="padding-left:0;padding-right:0;">
+                    <div class="col-6 right-col" style="padding-left:0;padding-right:0;">
                         <div class="p-4">
                             <h2>Кафе и рестораны</h2>
                             <p>Эквайринговый оборот 300&nbsp;000&nbsp;&#8381; в месяц, получили аванс 600&nbsp;000&nbsp;&#8381; на 11 месяцев</p>

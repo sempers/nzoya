@@ -243,11 +243,6 @@ body.fix {
     z-index: 1;
 }
 
-.form-box {
-    max-width: 420px;
-    width: 90%;
-    margin: 0 auto;
-}
 
 #content_load .c .box {
     position: relative;
@@ -264,6 +259,13 @@ body.fix {
     box-shadow: 0px 12px 24px rgba(44, 54, 67, 0.15);
 }
 */
+
+
+.form-box {
+    max-width: 420px;
+    width: 90%;
+    margin: 0 auto;
+}
 
 .q_val {
     text-align: right;
@@ -291,8 +293,6 @@ section {
 
 #section-promo {
     background-color:#f0f0f0;
-    /*background: #f5d1e2 url(images/top_bg.png) no-repeat center center fixed;
-    background-size: cover;*/
 }
 
 #section-who {
@@ -310,7 +310,8 @@ section {
 #section-how-to { }
 
 #section-who .left-col {
-    background: url(images/top_bg.png) no-repeat top left;
+    padding-left:30px;
+    background: url(images/top_bg.png) no-repeat ;
     color: #8650c4;
 }
 
