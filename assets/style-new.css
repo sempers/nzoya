@@ -5,8 +5,12 @@
     --primary-quarter: rgba(134, 80, 196, 0.25);
 }
 
-a, a:hover, a:visited, a:active {
+a, a:hover, a:visited, a:active, a:focus {
     color: var(--primary);
+}
+
+p {
+    font-size: 1rem;
 }
 
 /*.form-control:focus {
@@ -19,9 +23,21 @@ a, a:hover, a:visited, a:active {
     box-shadow: 0 0 0 0.2rem rgba(134, 80, 196, 0.25);
 }
 
-.btn-primary:focus, .btn-primary.focus {
+.btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(134, 80, 196, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(134, 80, 196, 0.5);
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:active, .btn-primary.active, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #733cb2;
+    border-color: #6d39a8;
 }
 
 /* /////////////////////////////////////
@@ -32,7 +48,7 @@ style.css
 
 body, html {
   overflow-x: hidden;
-    font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 html body.vuedal-open {
@@ -140,56 +156,6 @@ form .message span.red {
 .form_btn.active:after {
     display: none;
 }
-
-/*
-
-.slider-wrapper {
-    margin: 30px 0 50px;
-}
-.slider-wrapper span {
-    display: block;
-}
-.slider-wrapper .range-bar {
-    background: #ececec;
-    height: 6px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    display: block;
-    position: relative;
-}
-.range-min, .range-max {
-    display: none;
-}
-
-.slider-wrapper .range-quantity {
-    background: var(--primary);
-    height: 6px;
-    -webkit-border-radius: 3px 0 0 3px;
-    -moz-border-radius: 3px 0 0 3px;
-    border-radius: 3px 0 0 3px;
-}
-.slider-wrapper .range-handle {
-    color: #333;
-    text-align: center;
-    height: 16px;
-    font-size: 10px;
-    position: absolute;
-    top: -5px;
-    width: 16px;
-    background: #FFF;
-    border-radius: 50%;
-    box-shadow: 0.5px 0.5px 2px 1px rgba(0,0,0,.32);
-    transition: all 0s;
-    cursor: pointer;
-    z-index: 4;
-}
-
-.slider-wrapper .range-min, .slider-wrapper .range-max {
-    display: none;
-}*/
-
-
 
 .c_inp {
     width: auto;
@@ -401,9 +367,9 @@ body.fix {
 
 
 section {
-    min-height:320px;
-    padding-top: 50px;
-    padding-bottom: 70px;
+    min-height: 20rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 }
 
 #section-promo {
@@ -412,10 +378,19 @@ section {
     background-size: cover;*/
 }
 
+#section-promo .lead {
+
+}
+
 #section-who {
     background: #FF7F62;
     color: #FFF;
     padding:0;
+}
+
+#section-who h2 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 #section-how-to { }
@@ -452,30 +427,21 @@ section {
     padding-right: 67px;
     padding-top: 16px;
     padding-bottom: 16px;
-    font-size: 18px;
+    font-size: 1.25rem;
     font-weight: 200;
 }
 
-.btn-primary, .btn-primary:active {
-    color: #fff;
-    background-color: var(--main-color);
-    border-color: var(--main-color);
-}
 
-.btn-primary:hover {
-    color: #fff;
-    background-color: #733cb2;
-    border-color: #6d39a8;
-}
 
 .btn-cnt {
-    margin-top: 24px;
+    margin-top:2.5rem;
 }
 
 strong.num {
     display: inline-block;
     float: left;
-    margin-right: 10px;
+    margin-right: 0.6rem;
+    font-size: 2rem;
 }
 
 .vue-slider-process {
@@ -487,3 +453,7 @@ strong.num {
     background-color: var(--primary) !important;
 }
 
+
+.calc-row {
+    margin-bottom: 3rem;
+}

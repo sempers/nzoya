@@ -1,11 +1,12 @@
 <template>
-    <article class="home" style="margin-top:60px;">
+    <article class="home" style="margin-top:50px;">
+        <!--ПРОМО-->
         <section id="section-promo" class="d-flex">
             <div class="container mt-auto mb-auto">
                 <div class="row">
                     <div class="col-lg-2"></div>
                     <div class="col col-lg-8">
-                        <h1 class="mt-4 aos-init aos-animate text-center mb-4" style="font-size: 3.0em;">Привет, я ZOYA Finance!</h1>
+                        <h1 class="mt-4 aos-init aos-animate text-center mb-4" style="font-size: 3.5em;">Привет, я ZOYA Finance!</h1>
                         <p data-aos-delay="100" class="lead aos-init aos-animate">Я – скорая финансовая помощь для вашего бизнеса - получите займ до 3&nbsp;000&nbsp;000 рублей без очередей, залогов и справок. Никакой бюрократической возни!</p>
                         <div class="btn-cnt text-center">
                             <button data-aos-delay="400" class="btn btn-primary btn-zoya-size aos-init aos-animate go_my_form" @click="showFlyForm()">Получить займ</button>
@@ -16,11 +17,13 @@
             </div>
         </section>
 
+        <!--Для кого мы сделали этот сервис-->
         <section id="section-who" class="d-flex">
             <div class="ml-auto mr-auto">
-                <div class="row align-self-stretch d-flex ml-auto mr-auto" style="width: 100%; min-height:320px">
-                    <div class="col col-md-6 left-col align-self-stretch d-flex" style="padding-left: 60px; padding-right: 0px;">
-                        <div class="p-4 align-self-stretch d-flex flex-column"><h2 data-aos-delay="0" class="mb-auto aos-init">Для кого мы сделали этот сервис</h2>
+                <div class="row align-self-stretch d-flex ml-auto mr-auto" style="width: 100%; min-height:20rem">
+                    <div class="col col-md-6 left-col align-self-stretch d-flex" style="padding-left: 3rem; padding-right: 0;">
+                        <div class="p-4 align-self-stretch d-flex flex-column">
+                            <h2 data-aos-delay="0" class="mb-auto aos-init">Для кого мы сделали этот сервис</h2>
                             <div data-aos-delay="0" class="mt-auto mb-auto aos-init">
                                 <p>
                                     Zoya работает с любым розничным бизнесом у которого есть эквайринговый оборот.
@@ -29,17 +32,18 @@
                                     В общем, если вы принимаете к оплате карты более 3-х месяцев, оставляйте заявку. Мы обязательно предложим вам вариант финансирования.
                                 </p>
                             </div>
-                            <div data-aos-delay="10" class="mt-auto aos-init btn-cnt">
+                            <div data-aos-delay="10" class="aos-init btn-cnt">
                                 <button class="btn btn-primary btn-zoya-size go_my_form" @click="showFlyForm()">Получить займ</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-md-6 align-self-stretch d-flex right-col" style="padding-left: 0px; padding-right: 0px;">
+                    <div class="col col-md-6 align-self-stretch d-flex right-col" style="padding-left:0;padding-right: 0">
                         <div class="p-4">
                             <h2>Кафе и рестораны</h2>
-                            <p>Эквайринговый оборот 300&nbsp;000&nbsp;&#8381; в месяц, получили аванс 600&nbsp;000&nbsp;&#8381; на 11 месяцев</p>
+                            <p>
+                                Эквайринговый оборот 300&nbsp;000&nbsp;&#8381; в месяц, получили аванс 600&nbsp;000&nbsp;&#8381; на 11 месяцев
+                            </p>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -47,8 +51,8 @@
 
         <section id="section-how-to" class="d-flex">
             <div class="container">
-                <h3 class="text-center" style="color: #FF7F62;">Как получить займ? Всего 3 простых шага:</h3>
-                <div class="row mb-4" style="margin-top:30px">
+                <h3 class="text-center">Как получить займ? Всего 3 простых шага:</h3>
+                <div class="row mb-4" style="margin-top: 3rem">
                     <div data-aos-delay="100" class="col-md-4 aos-init"><strong class="num">1.</strong>
                         <p class="text-primary">Оставить<br>заявку</p>
                         <p>Вы оставляете заявку на сайте и с вами связывается наш менеджер и согласовывает параметры займа.</p>
@@ -74,8 +78,7 @@
                 <h3 class="text-center">Узнайте сумму финансирования</h3> <br><br>
                 <div class="col-12 col-md-7 ml-auto mr-auto">
                     <div id="my_calc">
-                        <div class="calc_row">
-                            <div class="slider-wrapper">
+                        <div class="calc-row">
                                 <div class="row">
                                     <div class="col-6" style="padding-left:0">
                                         <p class="sub">Эквайринговый оборот,<br>&#8381; в месяц</p>
@@ -95,10 +98,8 @@
                                                 v-bind="sliderOptions.options1"
                                         ></vue-slider>
                                </div>
-                            </div>
                         </div>
-                        <div class="calc_row">
-                            <div class="slider-wrapper">
+                        <div class="calc-row">
                                 <div class="row">
                                     <div class="col-6" style="padding-left:0">
                                         <p class="sub">Срок выплаты аванса, месяцев</p>
@@ -118,8 +119,8 @@
                                             v-bind="sliderOptions.options2"
                                     ></vue-slider>
                                 </div>
-                            </div>
                         </div>
+                        <div class="calc-row">
                         <div class="row mt-4">
                             <div class="col-6" style="padding-left:0">
                                 <p class="sub">Вы можете получить <br>аванс в размере</p>
@@ -128,23 +129,24 @@
                                 <span id="calc_total" class="q_val">134000 &#8381;</span>
                             </div>
                         </div>
+                        </div>
                         <div class="row mt-4 text-center btn-cnt">
                             <button class="btn btn-primary btn-zoya-size go_my_form" @click="showFlyForm()">Получить займ</button>
                         </div>
                     </div>
                 </div>
                 <div class="ml-auto mr-auto"></div>
-                <p class="text-center mt-4 mb-2" style="font-size: 12px; color: rgb(97, 97, 97);">Пример расчета носит исключительно информационный характер и не является публичной офертой.</p>
+                <p class="text-center mt-4 mb-2" style="font-size: 12px; color: rgb(97, 97, 97);">*) Пример расчета носит исключительно информационный характер и не является публичной офертой.</p>
             </div>
         </section>
 
         <section id="section-request" class="section-full d-flex">
             <div class="container mb-auto mt-auto">
                 <div>
-                    <h3 class="text-center text-primary">Заявка на финансирование</h3> <br>
+                    <h3 class="text-center">Заявка на финансирование</h3> <br>
                     <div class="form_f_box">
                         <div class="row mt-4">
-                            <div class=" ml-auto mr-auto"><p class="text-center" style="font-size: 14px;">
+                            <div class=" ml-auto mr-auto"><p class="text-center">
                                 Удивительно, но вам достаточно оставить только<br> свой номер
                                 телефона, мы вам перезвоним и уточним детали. </p>
                                 <br>
@@ -163,7 +165,8 @@
                                             <input type="hidden" name="site_link" value="http://zoyafinance.ru/">-->
 
                                             <div class="form_box">
-                                                <input type="phone" name="phone" v-model="request.phone" placeholder="" class="form-control form-control-lg ml-auto mr-auto">
+                                                <!--<input type="phone" name="phone" v-model="request.phone" placeholder="" class="form-control form-control-lg ml-auto mr-auto">-->
+                                                <b-form-input type="tel" v-model="request.phone" placeholder="8(495)555-55-55" class="form-control form-control-lg ml-auto mr-auto"></b-form-input>
                                                 <br>
                                                 <div class="form-check ml-auto mr-auto">
                                                     <input type="checkbox" v-model="request.agreeToProcess" value="1" name="rules" id="defaultCheck1" class="form-check-input">
