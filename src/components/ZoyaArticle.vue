@@ -135,78 +135,28 @@
 
             <section id="section-request" class="section-full d-flex">
                 <div class="container mb-auto mt-auto">
-                    <div>
-                        <h3 class="text-center">Заявка на финансирование</h3> <br>
-                        <div class="form-f-box">
-                            <div class="row mt-4">
-                                <div class="ml-auto mr-auto">
-                                    <p style="font-size: 14px;">
-                                        Вам достаточно оставить только свой номер
-                                        телефона, мы вам перезвоним и уточним детали. </p>
-                                    <div class="row mt-4">
-                                        <div class=" ml-auto mr-auto">
-                                            <!--- | form | --->
-                                            <form id="footer_form">
-                                                <div class="form-box">
-                                                    <!--<input type="phone" name="phone" v-model="request.phone" placeholder="" class="form-control form-control-lg ml-auto mr-auto">-->
-                                                    <masked-input mask="\+\7 (111) 111-11-11" v-model="request.phone" class="form-control form-control-lg ml-auto mr-auto" @input="rawVal = arguments[1]"/>
-                                                    <div class="form-check ml-auto mr-auto mt-4">
-                                                        <input type="checkbox" v-model="request.agreeToProcess" value="1" name="rules" id="agree1" class="form-check-input">
-                                                        <label for="agree1" class="form-check-label">Указывая свои
-                                                            персональные данные в полях заявки, вы соглашаетесь на их <a href="http://zoyafinance.ru/#" class="load" data-page="rules">обработку</a>.
-                                                        </label>
-                                                    </div>
-                                                    <div class="btn-cnt text-center">
-                                                        <button class="btn btn-primary btn-zoya-size" type="button" :disabled="disableSubmit" @click="showFlyForm()">Получить займ</button>
-                                                    </div>
-                                                </div>
-                                                <div class="message"></div>
-                                            </form>
-                                            <!--- | form | --->
-                                        </div>
-                                    </div>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!---->
-                </div>
-            </section>
-        </article>
-        <!--FLY FORM-->
-        <div class="fly-form animation" id="my_form" v-if="shownEdit.flyForm">
-            <div class="overlay"></div>
-            <div class="inner">
-                <div>
                     <h3 class="text-center">Заявка на финансирование</h3> <br>
                     <div class="form-f-box">
                         <div class="row mt-4">
-                            <div class=" ml-auto mr-auto"><p style="font-size: 14px;">
-                                Вам достаточно оставить только свой номер
-                                телефона, мы вам перезвоним и уточним детали. </p>
+                            <div class="ml-auto mr-auto">
+                                <p style="font-size: 14px;">
+                                    Вам достаточно оставить только свой номер
+                                    телефона, мы вам перезвоним и уточним детали. </p>
                                 <div class="row mt-4">
                                     <div class=" ml-auto mr-auto">
+                                        <!--- | form | --->
                                         <form id="footer_form">
-                                            <!--<input type="hidden" name="form" value="footer_form">
-                                            <input type="hidden" name="money" value="100000" class="form_money">
-                                            <input type="hidden" name="months" value="6" class="form_months">
-                                            <input type="hidden" name="total" value="134000" class="form_total">
-                                            <input type="hidden" name="form_name" value="Заявка на финансирование">
-                                            <input type="hidden" name="gorod" value="" class="gorod">
-                                            <input type="hidden" name="page_name" value="Главная">
-                                            <input type="hidden" name="site_link" value="http://zoyafinance.ru/">-->
-
                                             <div class="form-box">
-                                                <masked-input mask="\+\7 (111) 111-11-11" class="form-control form-control-lg ml-auto mr-auto" v-model="request.phone" @input="rawVal = arguments[1]"/>
+                                                <!--<input type="phone" name="phone" v-model="request.phone" placeholder="" class="form-control form-control-lg ml-auto mr-auto">-->
+                                                <masked-input mask="\+\7 (111) 111-11-11" v-model="request.phone" class="form-control form-control-lg ml-auto mr-auto" @input="rawVal = arguments[1]"/>
                                                 <div class="form-check ml-auto mr-auto mt-4">
-                                                    <input type="checkbox" v-model="request.agreeToProcess" value="1" name="rules" id="agree2" class="form-check-input">
-                                                    <label for="agree2" class="form-check-label">Указывая свои
+                                                    <input type="checkbox" v-model="request.agreeToProcess" value="1" name="rules" id="agree1" class="form-check-input">
+                                                    <label for="agree1" class="form-check-label">Указывая свои
                                                         персональные данные в полях заявки, вы соглашаетесь на их <a href="http://zoyafinance.ru/#" class="load" data-page="rules">обработку</a>.
                                                     </label>
                                                 </div>
                                                 <div class="btn-cnt text-center">
-                                                    <button class="btn btn-primary btn-zoya-size" type="button" :disabled="disableSubmit" @click="shownEdit.flyForm = false">Получить займ</button>
+                                                    <button class="btn btn-primary btn-zoya-size" type="button" :disabled="disableSubmit" @click="showFlyForm()">Получить займ</button>
                                                 </div>
                                             </div>
                                             <div class="message"></div>
@@ -218,7 +168,55 @@
                             </div>
                         </div>
                     </div>
+
+                    <!---->
                 </div>
+            </section>
+        </article>
+        <!--FLY FORM-->
+        <div class="fly-form animation" id="my_form" v-if="shownEdit.flyForm">
+            <div class="overlay"></div>
+            <div class="inner">
+                <h3 class="text-center">Заявка на финансирование</h3> <br>
+                <div class="form-f-box">
+                    <div class="row mt-4">
+                        <div class=" ml-auto mr-auto"><p style="font-size: 14px;">
+                            Вам достаточно оставить только свой номер
+                            телефона, мы вам перезвоним и уточним детали. </p>
+                            <div class="row mt-4">
+                                <div class=" ml-auto mr-auto">
+                                    <form id="footer_form">
+                                        <!--<input type="hidden" name="form" value="footer_form">
+                                        <input type="hidden" name="money" value="100000" class="form_money">
+                                        <input type="hidden" name="months" value="6" class="form_months">
+                                        <input type="hidden" name="total" value="134000" class="form_total">
+                                        <input type="hidden" name="form_name" value="Заявка на финансирование">
+                                        <input type="hidden" name="gorod" value="" class="gorod">
+                                        <input type="hidden" name="page_name" value="Главная">
+                                        <input type="hidden" name="site_link" value="http://zoyafinance.ru/">-->
+
+                                        <div class="form-box">
+                                            <masked-input mask="\+\7 (111) 111-11-11" class="form-control form-control-lg ml-auto mr-auto" v-model="request.phone" @input="rawVal = arguments[1]"/>
+                                            <div class="form-check ml-auto mr-auto mt-4">
+                                                <input type="checkbox" v-model="request.agreeToProcess" value="1" name="rules" id="agree2" class="form-check-input">
+                                                <label for="agree2" class="form-check-label">Указывая свои
+                                                    персональные данные в полях заявки, вы соглашаетесь на их <a href="http://zoyafinance.ru/#" class="load" data-page="rules">обработку</a>.
+                                                </label>
+                                            </div>
+                                            <div class="btn-cnt text-center">
+                                                <button class="btn btn-primary btn-zoya-size" type="button" :disabled="disableSubmit" @click="shownEdit.flyForm = false">Получить займ</button>
+                                            </div>
+                                        </div>
+                                        <div class="message"></div>
+                                    </form>
+                                    <!--- | form | --->
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
