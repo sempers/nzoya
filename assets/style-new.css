@@ -37,8 +37,8 @@ a, a:hover, a:visited, a:active {
 
 .btn-primary, .btn-primary:active, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
     color: #fff;
-    background-color: var(--main-color);
-    border-color: var(--main-color);
+    background-color: #8650c4;
+    border-color: #8650c4;
 }
 
 .btn-primary:hover {
@@ -49,8 +49,8 @@ a, a:hover, a:visited, a:active {
 
 .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: var(--main-color);
-    border-color: var(--main-color);
+    background-color: #8650c4;
+    border-color: #8650c4;
 }
 
 .btn-cnt {
@@ -329,7 +329,7 @@ section {
 }
 
 .text-primary {
-    color: var(--main-color) !important;
+    color: #8650c4 !important;
 }
 
 .text-center {
