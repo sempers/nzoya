@@ -1,7 +1,7 @@
 <template>
     <div id="article-n-flyform">
         <article class="home" style="margin-top:55px;">
-            <section id="section-promo" class="d-flex">
+            <section id="section-promo" class="d-flex" data-aos="fade-up">
                 <div class="container mt-auto mb-auto">
                     <div class="row">
                         <div class="col-lg-2"></div>
@@ -17,49 +17,47 @@
                 </div>
             </section>
 
-            <section id="section-who" class="d-flex">
+            <section id="section-who" class="d-flex" data-aos="fade-up">
                 <div class="row container mr-auto ml-auto">
                     <div class="col-6 left-col">
-                        <div class="p-4">
+                        <div class="p-4" data-aos="fade-right">
                             <h2 data-aos-delay="0" class="aos-init">Для кого мы сделали этот сервис</h2>
-                            <div data-aos-delay="0" class="mt-auto mb-auto aos-init">
+                            <div data-aos-delay="200" class="mt-auto mb-auto aos-init">
                                 <p>Zoya работает с любым розничным бизнесом у которого есть эквайринговый оборот.</p>
                                 <p>В общем, если вы принимаете к оплате карты более 3-х месяцев, оставляйте заявку. Мы обязательно предложим вам вариант финансирования.</p>
                             </div>
-                            <div data-aos-delay="10" class="aos-init btn-cnt">
+                            <div data-aos-delay="500" class="aos-init btn-cnt">
                                 <button class="btn btn-primary btn-zoya-size go_my_form" @click="showFlyForm()">Оставить заявку</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-6 right-col" style="padding-left:0;padding-right:0;">
-                        <div class="p-4">
-                            <h2>Кафе и рестораны</h2>
-                            <p>Эквайринговый оборот 300&nbsp;000&nbsp;&#8381; в месяц, получили аванс 600&nbsp;000&nbsp;&#8381; на 11 месяцев</p>
+                        <div class="p-4" data-aos="fade-left">
+                            <h2 data-aos-delay="0">Кафе и рестораны</h2>
+                            <p data-aos-delay="200">Эквайринговый оборот 300&nbsp;000&nbsp;&#8381; в месяц, получили аванс 600&nbsp;000&nbsp;&#8381; на 11 месяцев</p>
                         </div>
                     </div>
                 </div>
             </section>
-
-
             <!-- HOW TO -->
-            <section id="section-how-to" class="d-flex">
+            <section id="section-how-to" class="d-flex" >
                 <div class="container">
-                    <h3 class="text-center">Как получить займ? Всего 3 простых шага:</h3>
+                    <h3 class="text-center" data-aos="fade-up">Как получить займ? Всего 3 простых шага:</h3>
                     <div class="row mb-4" style="margin-top:30px">
-                        <div data-aos-delay="100" class="col-md-4 aos-init"><strong class="num">1.</strong>
+                        <div data-aos-delay="100" class="col-md-4 aos-init" data-aos="fade-right"><strong class="num">1.</strong>
                             <p class="text-primary">Оставить<br>заявку</p>
                             <p>Вы оставляете заявку на сайте и с вами связывается наш менеджер и согласовывает параметры займа.</p>
                         </div>
-                        <div data-aos-delay="200" class="col-md-4 aos-init"><strong class="num">2.</strong>
+                        <div data-aos-delay="200" data-aos="fade-right" class="col-md-4 aos-init"><strong class="num">2.</strong>
                             <p class="text-primary">Подключить эквайринг<br>нашего банка партнёра</p>
                             <p>Если у Вас уже установлен эквайринг (оплата пластиковыми картами) нашего банка партнёра, то сразу переходим к следующему шагу</p>
                         </div>
-                        <div data-aos-delay="300" class="col-md-4 aos-init"><strong class="num">3.</strong>
+                        <div data-aos-delay="300" data-aos="fade-right" class="col-md-4 aos-init"><strong class="num">3.</strong>
                             <p class="text-primary">Получить деньги<br>на текущий счет</p>
                             <p>Используйте полученные средства на любые цели в Вашем бизнесе</p>
                         </div>
                     </div>
-                    <div data-aos-delay="600" class="row pt-4 aos-init">
+                    <div data-aos-delay="600" class="row pt-4 aos-init" data-aos="fade-right">
                         <div class="col-md-5"><p class="text-primary">А что потом?</p>
                             <p>Погашение займа происходит автоматически и ежедневно из поступлений по эквайрингу (оплата платиковыми картами) – стандартно не более 30%</p></div>
                     </div>
@@ -67,13 +65,12 @@
             </section>
 
             <!-- СУММА ФИНАНСИРОВАНИЯ -->
-            <section id="section-calc" class="d-flex">
+            <section id="section-calc" class="d-flex" data-aos="fade-up">
                 <div class="container">
                     <h3 class="text-center">Узнайте сумму финансирования</h3> <br><br>
                     <div class="col-12 col-md-7 ml-auto mr-auto">
                         <div id="my_calc">
                             <div class="calc-row">
-
                                 <div class="row">
                                     <div class="col-6" style="padding-left:0">
                                         <p class="sub">Эквайринговый оборот,<br>&#8381; в месяц</p>
@@ -134,7 +131,7 @@
             </section>
 
             <!-- ЗАЯВКА -->
-            <section id="section-request" class="d-flex">
+            <section id="section-request" class="d-flex" data-aos="fade-up">
                 <div class="container mb-auto mt-auto">
                     <h3 class="text-center">Заявка на финансирование</h3> <br>
                     <div class="form-f-box">
@@ -226,18 +223,17 @@
 </template>
 <script>
     import VueSlider from 'vue-slider-component'
-    //import 'vue-slider-component/dist-css/vue-slider-component.css'
-    // import theme
     import 'vue-slider-component/theme/default.css'
     import MaskedInput from 'vue-masked-input'
+    import AOS from 'aos'
 
     export default {
         components: {
             VueSlider, MaskedInput
         },
 
-        updated() {
-            console.log("AOS init()")
+        mounted() {
+            console.log("AOS init()");
             AOS.init();
         },
 
