@@ -18,7 +18,7 @@
             </section>
 
             <section id="section-who" class="d-flex" data-aos="fade-up">
-                <div class="row container mr-auto ml-auto">
+                <div class="row container-fluid mr-auto ml-auto">
                     <div class="col-6 left-col">
                         <div class="p-4" data-aos="fade-right">
                             <h2 data-aos-delay="0" class="aos-init">Для кого мы сделали этот сервис</h2>
